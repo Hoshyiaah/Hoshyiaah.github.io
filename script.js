@@ -10,10 +10,32 @@ function checkVisibility() {
             div.classList.remove('visible');
           }
     })
-
-    console.log(div.getBoundingClientRect)
 };
 
 window.addEventListener('scroll', checkVisibility);
 
 checkVisibility();
+
+const imagesMenu = document.querySelectorAll('.imgMenu');
+
+imagesMenu.forEach(function(img) {
+  img.addEventListener('click', function() {
+
+    const imgMenu = document.querySelector('.menu');
+    const imgClose = document.querySelector('.close');
+    const nav = document.querySelector('nav');
+
+    if (imgMenu.style.display === 'block') {
+      imgMenu.style.display = 'none';
+      imgClose.style.display = 'block';
+      nav.style.display = 'flex';
+      nav.classList.add('animate');
+    } else {
+      imgClose.style.display = 'none';
+      imgMenu.style.display = 'block';
+      nav.style.display = 'none';
+      nav.classList.remove('animate');
+    }
+
+  });
+});

@@ -39,3 +39,13 @@ imagesMenu.forEach(function(img) {
 
   });
 });
+
+document.querySelectorAll('.example').forEach(div => {
+  div.addEventListener('click', function () {
+      
+      const url = this.dataset.url;
+      if (url) {
+          window.location.href = url;
+      }
+  });
+});

@@ -1,10 +1,15 @@
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
-// Game settings
-const gridSize = 20; // Size of each cell in pixels
+const computedStyle = window.getComputedStyle(canvas);
+canvas.width = parseInt(computedStyle.width); // Récupère la largeur CSS
+canvas.height = parseInt(computedStyle.height); // Récupère la hauteur CSS
+
+const gridSize = canvas.width / 20 ; // Size of each cell in pixels
 const canvasSize = canvas.width; // Canvas width and height
 const totalCells = canvasSize / gridSize;
+
+console.log(gridSize);
 
 // Snake and food
 let snake = [{ x: 10, y: 10 }]; // Snake starts at the center
@@ -74,7 +79,7 @@ function updateGame() {
 function renderGame() {
   // Clear the canvas
   ctx.fillStyle = "#000";
-  ctx.fillRect(0, 0, canvasSize, canvasSize);
+  ctx.fillRect(0, 0, canvas.width, canvas.width);
 
   // Draw food
   drawCell(food.x, food.y, "#f00");
@@ -111,13 +116,13 @@ function handleInput(event) {
     // Si l'événement est un événement de clic (pour les boutons mobiles)
     if (event.type === "click") {
       // L'argument "directionInput" peut être soit "up", "down", "left", "right"
-      if (event.target.id === "upBtn" && direction.y === 0) {
+      if (event.currentTarget.id === "upBtn" && direction.y === 0) {
         direction = { x: 0, y: -1 };
-      } else if (event.target.id === "downBtn" && direction.y === 0) {
+      } else if (event.currentTarget.id === "downBtn" && direction.y === 0) {
         direction = { x: 0, y: 1 };
-      } else if (event.target.id === "leftBtn" && direction.x === 0) {
+      } else if (event.currentTarget.id === "leftBtn" && direction.x === 0) {
         direction = { x: -1, y: 0 };
-      } else if (event.target.id === "rightBtn" && direction.x === 0) {
+      } else if (event.currentTarget.id === "rightBtn" && direction.x === 0) {
         direction = { x: 1, y: 0 };
       }
     }

@@ -14,7 +14,7 @@
     <meta property="og:type" content="website">
 </head>
 <body>
-    <header id="bioNav">
+    <header>
         <div>
             <h1>Bienvenue dans mon portfolio !</h1>
             <img class="imgMenu menu" src="./frontendRoutes/img/openMenu.png" alt="Menu">
@@ -28,22 +28,31 @@
     </header>
 
     <main>
-        <div class="container">
+        <div class="container" id="bioNav">
 
             <div class="intro">
-                <div class="intros">
+                <div class="description">
                 <p>
                 Bonjour, je m'appelle Joao Marques et je suis développeur web débutant, passionné par la création de solutions modernes et fonctionnelles pour le web. <br>
                 Après avoir découvert l’univers du développement web, j’ai décidé de me lancer dans cette aventure et d’apprendre à concevoir des sites et des applications performantes.
                 </p>
                 </div>
 
-                <div class="intros">
-                    <p class="find">Ce que vous trouverez ici :</p>
-                    <ul>
-                        <li><strong>Projets réalisés :</strong> Une sélection de projets que j’ai développés pour pratiquer mes compétences. Ces projets vont des simples sites vitrines aux applications interactives utilisant des technologies modernes.</li>
-                        <li class="comp"><div class="comps"><div class="subComps"><strong class="mesComp">Mes compétences :</strong></div><div class="subComps"><p> HTML</p><img class="logo" src="./frontendRoutes/img/iconHTML.png" alt=""><p>, CSS</p><img class="logo" src="./frontendRoutes/img/iconCSS.png"><p>, JavaScript</p><img class="logo" src="./frontendRoutes/img/iconJS.png"></div></div><div><p>et une introduction à des outils comme React et/ou NodeJS.</p></div></li>
-                    </ul>
+                <div class="whatToFindContainer">
+                    <p class="find"><strong>CE QUE VOUS TROUVEREZ ICI</strong></p>
+                    <div class="description">
+                        <div class="projectsIntro"><strong class="strongTitle">Projets réalisés</strong></div>Une sélection de projets que j’ai développés pour pratiquer mes compétences. <br> Ces projets vont des simples sites vitrines aux applications interactives utilisant des technologies modernes.
+                    </div>
+                    <div class="skillsIntro"><strong class="strongTitle skillsIntro">MES COMPETENCES</strong></div>
+                    <div class="logosContainer">
+                        <img class="logo" src="./frontendRoutes/img/iconHTML.png" alt="HTML">
+                        <img class="logo" src="./frontendRoutes/img/iconCSS.png" alt="CSS">
+                        <img class="logo" src="./frontendRoutes/img/iconJS.png" alt="JS">
+                        <img class="logo" src="./frontendRoutes/img/iconReact.png" alt="REACT">
+                        <div class="betweenParentheses">
+                            <p>(</p><img class="logo" src="./frontendRoutes/img/iconNodeJs.png" alt="NODE JS"><p>)</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -98,10 +107,15 @@
 
     <footer id="footerNav">
         <div>
-            <p>Contact</p> <p><strong>Email :</strong> joao2004m@gmail.com</p>
+            <p><strong>Contact</strong></p> <p>Email : joao2004m@gmail.com</p>
         </div>
         <div>
-            <p>Localisation</p> <p><strong>Pays :</strong> France</p> <p><strong>Region :</strong> Ile-De-France</p>
+            <p><strong>Localisation</strong></p> <p>Pays : France</p> <p>Region : Ile-De-France</p>
+        </div>
+        <div> <p><strong>Réseaux</strong></p>
+            <section class="textWithIcon">
+                <img class="footerIcons" src="./frontendRoutes/img/iconLinkedin.png" alt=""> <a href="https://www.linkedin.com/in/joao-marques-1b919b327/">Mon profil LinkedIn</a>
+            </section>
         </div>
     </footer>
 

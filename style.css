@@ -37,22 +37,22 @@ h1, h3 {
 }
 
 header, footer {
+    z-index: 1;
     min-height: 100px;
     background-color: rgb(0, 84, 105);
     width: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-    z-index: 1;
 }
 
 header {
+    position: sticky;
+    top: 0;
     text-align: center;
-    z-index: 0;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
 }
 
 header div {
@@ -79,11 +79,11 @@ nav {
     width: 100%;
     display: flex;
     justify-content: center;
+    animation: appear 0.5s 1 ease-out;
 }
 
 nav * {
     padding: 20px;
-    margin: 0 10px;
     text-decoration: none;
 }
 
@@ -134,22 +134,19 @@ nav *:hover {
 }
 
 footer {
-    position: sticky;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
     text-align: center;
-    justify-content: space-around;
-    align-items: center;
 }
 
 footer div {
-    margin: 20px 0;
+    margin: 20px auto;
 }
 
 main {
+    z-index: 0;
     background-color: rgb(0, 42, 53);
-    flex: 1 0 auto;
+    flex: 1;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -161,7 +158,6 @@ main {
 }
 
 .intro {
-    margin-bottom: 5%;
     animation: appearLeft 0.5s 1 ease-out;
 }
 
@@ -176,49 +172,53 @@ main {
     }
 }
 
-.intros {
+.description {
     background-color: rgba(0, 84, 105, 0.26);
     padding: 30px;
     border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 10px;
-    margin: 20px 0;
-}
-
-.comp {
-    display: flex;
-}
-
-.comps {
-    display: flex;
-    align-items: center;
-}
-
-.subComps {
-    display: flex;
-    align-items: center;
-}
-
-.mesComp {
-    margin-right: 5px;
+    margin: 30px 0 50px 0;
 }
 
 .find {
-    margin: 7px 0;
+    font-size: 25px;
+    text-align: center;
 }
 
-li {
-    margin: 5px 0;
-    list-style: none;
+.logosContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    margin: 30px 0 50px 0;
+    justify-items: center;
+    gap: 20px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.betweenParentheses {
+    display: flex;
+    align-items: center;
+    font-weight: 200;
+    font-size: 70px;
+}
+
+.strongTitle {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.skillsIntro {
+    text-align: center;
+    font-size: 25px;
 }
 
 strong {
     color: rgb(181, 220, 255);
     font-weight: 500;
-}
-
-.logo {
-    width: 30px;
-    height: 30px;
 }
 
 .example {
@@ -269,10 +269,19 @@ a {
     color: white;
 }
 
-@media (max-width: 995px) {
-    .comp {
-        display: block;
-    }
+.footerIcons {
+    width: 30px;
+}
+
+.textWithIcon {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.textWithIcon a {
+    display: block;
+    margin-top: 10px;
 }
 
 @media (max-width: 600px) {
@@ -281,22 +290,20 @@ a {
     }
 }
 
-
-@media (max-width: 515px) {
-    .comp {
+@media (max-width: 775px) {
+    footer {
         flex-direction: column;
     }
 
-    .comps {
-        display: block;
+    .logosContainer {
+        width: 90%;
+        margin: 45px auto;
     }
 
-    .mesComp {
-        margin-bottom: 5px;
+    #exNav h3 {
+        text-align: center;
     }
-}
 
-@media (max-width: 775px) {
     .example {
         flex-direction: column;
     }

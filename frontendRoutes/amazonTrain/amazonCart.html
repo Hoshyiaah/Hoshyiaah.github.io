@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img class="logo" id="amazonLogo" src="./AmazonImgs/logoAmazon.png" alt="LOGO">
+        <div class="cartImgAndNb">
+            <img class="cartImg" id="cartImg" src="./AmazonImgs/cart.png" alt="CART">
+            <p class="cartNb" id="cartNb">0</p>
+        </div>
+    </header>
+    <main>
+        <div class="cartContainer">
+            <div class="productsDisplay" id="productsDisplay"></div>
+            <div class="priceContainer">
+                <p class="totalP">TOTAL DU MONTANT</p>
+                <p class="finalPrice" id="finalPrice">00,00$</p>
+                <button>Proceder au payement</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="./cart.js"></script>
+</body>
+</html>

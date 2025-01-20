@@ -158,6 +158,36 @@ main {
     width: 90%;
 }
 
+.picContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 50px;
+}
+
+.myPic {
+    border: 2px solid black;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    filter: brightness(107%);
+}
+
+@media (max-width: 820px) {
+    .picContainer {
+        flex-direction: column;
+    }
+
+    .myPic {
+        height: auto;
+        width: 70%;
+        aspect-ratio: 1/1;
+    }
+}
+
 .intro {
     box-sizing: border-box;
     animation: appearLeft 0.5s 1 ease-out;
@@ -183,11 +213,11 @@ main {
 }
 
 .description {
+    max-width: 500px;
     background-color: rgba(0, 84, 105, 0.26);
     padding: 30px;
     border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 10px;
-    margin-bottom: 50px;
 }
 
 .logosContainer {

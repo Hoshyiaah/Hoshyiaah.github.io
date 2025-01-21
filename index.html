@@ -34,39 +34,41 @@
                 <p class="find"><strong>DESCRIPTION</strong></p>
                 <div class="picContainer">
                     <img class="myPic" src="./frontendRoutes/img/photoJoao.jpg" alt="MyPic">
-                    <div class="description">
+                    <div class="firstDescription">
                     <p>
-                    Bonjour, je m'appelle Joao Marques et je suis développeur web débutant, passionné par la création de solutions modernes et fonctionnelles pour le web. <br>
-                    Après avoir découvert l’univers du développement web, j’ai décidé de me lancer dans cette aventure et d’apprendre à concevoir des sites et des applications performantes.
+                    Bonjour, je m'appelle Joao Marques et je suis développeur web débutant, passionné par la création de solutions modernes et fonctionnelles pour le web.
                     </p>
                     </div>
                 </div>
                 <div class="whatToFindContainer">
                     <p class="find"><strong>CE QUE VOUS TROUVEREZ ICI</strong></p>
-                    <div class="description">
-                        <div class="projectsIntro"><strong class="strongTitle">Projets réalisés</strong></div>Une sélection de projets que j’ai développés pour pratiquer mes compétences.
-                    </div>
-                    <div class="skillsIntro"><strong class="strongTitle skillsIntro">MES COMPETENCES</strong></div>
-                    <div class="logosContainer">
-                        <img class="logo" src="./frontendRoutes/img/iconHTML.png" alt="HTML">
-                        <img class="logo" src="./frontendRoutes/img/iconCSS.png" alt="CSS">
-                        <img class="logo" src="./frontendRoutes/img/iconJS.png" alt="JS">
-                        <img class="logo" src="./frontendRoutes/img/iconReact.png" alt="REACT">
-                        <div class="betweenParentheses">
-                            <p>(</p><img class="logo" src="./frontendRoutes/img/iconNodeJs.png" alt="NODE JS"><p>)</p>
-                        </div>
+                    <div class="secondDescription">
+                        <div class="projectsIntro"><strong class="strongTitle">Projets réalisés</strong></div><p>Une sélection de projets que j’ai développés pour pratiquer mes compétences.</p>
                     </div>
                 </div>
             </div>
 
-            <div id="exNav">
+            <div class="skillsContainer">
+                <div class="skillsIntro"><strong class="strongTitle skillsIntro">MES COMPETENCES</strong></div>
+                <div class="logosContainer">
+                    <img class="logo" src="./frontendRoutes/img/iconHTML.png" alt="HTML">
+                    <img class="logo" src="./frontendRoutes/img/iconCSS.png" alt="CSS">
+                    <img class="logo" src="./frontendRoutes/img/iconJS.png" alt="JS">
+                    <img class="logo" src="./frontendRoutes/img/iconReact.png" alt="REACT">
+                    <div class="betweenParentheses">
+                        <p>(</p><img class="logo" src="./frontendRoutes/img/iconNodeJs.png" alt="NODE JS"><p>)</p>
+                    </div>
+                </div>
+            </div>
 
-                <h3>Voici des exemples de petits projets réalisés :</h3>
+            <h3 class="examplesIntro" id="exNav">Voici des exemples de petits projets réalisés :</h3>
+
+            <div class="examplesContainer">
 
                 <div class="example scrolled" data-url="./frontendRoutes/amazonTrain/amazonMenu.html">
                     <img class="imgGh" src="./frontendRoutes/img/screenAmazon.png" alt="">
                     <div class="explain">
-                        <a href="./frontendRoutes/amazonTrain/amazonMenu.html">Clone simpliste d'un site de e-commerce</a>
+                        <a class="titleExplain" href="./frontendRoutes/amazonTrain/amazonMenu.html">Clone simpliste d'un site de e-commerce</a>
                         <p><strong>Commandes de produits</strong> enregistrées dans le Localstorage et mises à jour. <br> Renvoie dans un panier qui affiche les produits sélectionnés et fait le calcul du prix total.</p>
                     </div>
                 </div>
@@ -74,7 +76,7 @@
                 <div class="example scrolled" data-url="./frontendRoutes/CalendarJsNode/calendar.html">
                     <img class="imgGh" src="./frontendRoutes/img/screenHG.png" alt="">
                     <div class="explain">
-                        <a href="./frontendRoutes/CalendarJsNode/calendar.html">Exemple de réservation de chambres d'hôtes</a>
+                        <a class="titleExplain" href="./frontendRoutes/CalendarJsNode/calendar.html">Exemple de réservation de chambres d'hôtes</a>
                         <p><strong>Un calendrier personnalisé</strong> qui renvoie vers un formulaire. <br> Comporte un système de réservation via API Fetch et l'envoi de mails de confirmation grâce à NodeJS.</p>
                     </div>
                 </div>
@@ -82,7 +84,7 @@
                 <div class="example scrolled" data-url="./frontendRoutes/productTableReact/productTable.html">
                     <img class="imgGh" src="./frontendRoutes/img/screenProdTable.png" alt="">
                     <div class="explain">
-                        <a href="./frontendRoutes/productTableReact/productTable.html">Table de produits organisée</a>
+                        <a class="titleExplain" href="./frontendRoutes/productTableReact/productTable.html">Table de produits organisée</a>
                         <p><strong>Une table</strong> réalisée avec REACT qui liste les produits et trie leurs caractéristiques dans un tableau.<br>Peut être filtrée en fonction de certains requis.</p>
                     </div>
                 </div>
@@ -90,7 +92,7 @@
                 <div class="example scrolled" data-url="./frontendRoutes/snakeJs/snake.html">
                     <img class="imgGh" src="./frontendRoutes/img/screenSnake.png" alt="">
                     <div class="explain">
-                        <a href="./frontendRoutes/snakeJs/snake.html">Jeu de Snake minimaliste</a>
+                        <a class="titleExplain" href="./frontendRoutes/snakeJs/snake.html">Jeu de Snake minimaliste</a>
                         <p><strong>Un jeu Snake</strong> réalisé avec un canvas. <br> Comporte de nombreux calculs, des méthodes pour les canvas ainsi que des systèmes de Game Over.</p>
                     </div>
                 </div>
@@ -98,7 +100,7 @@
                 <div class="example scrolled" data-url="./frontendRoutes/CalculatriceJs/calc.html">
                     <img class="imgGh" src="./frontendRoutes/img/screenCalc.png" alt="">
                     <div class="explain">
-                        <a href="./frontendRoutes/CalculatriceJs/calc.html">Exemple de calcultarice stylisée</a>
+                        <a class="titleExplain" href="./frontendRoutes/CalculatriceJs/calc.html">Exemple de calcultarice stylisée</a>
                         <p><strong>Une calculatrice personnalisée</strong> qui effectue le calcul demandé (avec certaines restrictions de duplication de signes). <br> Comporte un style CSS soigné avec des transitions fluides pour les boutons.</p>
                     </div>
                 </div>
@@ -106,7 +108,7 @@
                 <div class="example scrolled" data-url="./frontendRoutes/levelUpJs/levelUp.html">
                     <img class="imgGh" src="./frontendRoutes/img/screenLvlUp.png" alt="">
                     <div class="explain">
-                        <a href="./frontendRoutes/levelUpJs/levelUp.html">Système de montée de niveau personnalisée</a>
+                        <a class="titleExplain" href="./frontendRoutes/levelUpJs/levelUp.html">Système de montée de niveau personnalisée</a>
                         <p><strong>Un système</strong> qui augmente une barre de progrès personnalisée en cliquant sur un bouton. <br> Comporte des transitions fluides avec du Javascript précis pour la montée de niveau.</p>
                     </div>
                 </div>
